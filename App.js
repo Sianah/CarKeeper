@@ -7,9 +7,9 @@ export default function App() {
 
   // List of free-to-use car images (replace with actual image paths)
   const carImages = [
-    require('./path_to_car1.jpg'),
-    require('./path_to_car2.jpg'),
-    require('./path_to_car3.jpg'),
+    require('./car1.jpg'),
+    require('./car2.jpg'),
+    require('./car3.jpg'),
     // ... add more images as needed
   ];
 
