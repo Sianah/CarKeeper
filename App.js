@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { Asset } from 'expo-asset';
+import { StyleSheet, Image, Text, TouchableOpacity, View } from 'react-native';
 
 export default function App() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // List of free-to-use car images (replace with actual image paths)
   const carImages = [
     require('./car1.jpg'),
     require('./car2.jpg'),
@@ -18,9 +16,13 @@ export default function App() {
   };
 
   return (
-    <TouchableOpacity style={styles.container} onPress={handleImageTap}>
-      <Image source={carImages[currentImageIndex]} style={styles.carImage} resizeMode="contain" />
-    </TouchableOpacity>
+    <View style={styles.container}>
+      <Text style={styles.headerText}>Car Keeper</Text>
+      <TouchableOpacity onPress={handleImageTap}>
+        <Image source={carImages[currentImageIndex]} style={styles.carImage} resizeMode="contain" />
+        <Text>A simple app. For simple things.</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
 
@@ -29,11 +31,17 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 50,
+  },
+  headerText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
   },
   carImage: {
-    width: '100%',
-    height: '100%',
+    width: 300, 
+    height: 300,
+
   },
 });
 
