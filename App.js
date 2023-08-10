@@ -8,6 +8,12 @@ export default function App() {
     require('./car1.jpg'),
     require('./car2.jpg'),
     require('./car3.jpg'),
+    require('./car4.jpg'),
+    require('./car5.jpg'),
+    require('./car6.jpg'),
+    require('./car7.jpg'),
+    require('./car8.jpg'),
+    require('./car9.jpg'),
     // ... add more images as needed
   ];
 
